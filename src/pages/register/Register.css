@@ -1,0 +1,100 @@
+.register{
+    padding: 1rem 0;
+  }
+  .register-image {
+    display: flex;
+    justify-content: center;
+    .img-logo{
+      margin: 0;
+    }
+  }
+  
+  .new-user {
+    border: 1px solid #a6a6a6;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 340px;
+    margin: 3rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+
+    
+  }
+  .title-register {
+    text-align: center;
+    font-size: 20px;
+  }
+  
+  .form-register{
+    width: 90%;
+    display: flex;
+    flex-direction: column;  
+  }
+  
+  .input-group { 
+    display: flex;
+    flex-direction: column;  
+    font-weight: bold;
+    font-size: 13px;  
+    margin:.5rem 0;
+  
+    input{
+      height: 31px;    
+      line-height: normal;
+      padding: 10px 16px;
+    }  
+  }
+    .input-group input,.input-group textarea,.input-group select {    
+      border: 1px solid #a6a6a6;    
+      border-radius: 4px;
+      outline: none;
+     
+    }
+  
+  .circle-info{
+    color: #F90;
+  }
+  .required {
+    color: red;
+  }
+  
+  .text-small{
+    font-size: 11px;
+    font-style: italic;
+    font-weight: normal;
+  }
+  
+  .select-country{
+      height: 31px;
+      padding: 3px 7px;
+      line-height: normal;
+      background-color: #fff;
+     border: 1px solid #a6a6a6;
+     border-radius: 2px;
+  }
+  
+  .fa-solid.fa-circle-info {
+    color: #F90;
+  }
+  
+  .form-button{
+    height: 35px;
+    border-radius: 5px; 
+    background-color: #a6a6a6;
+    border: 0;
+    font-weight: 600;
+    margin: 10px 0;
+  }
+  .form-button:hover{ 
+      background-color: var(--link-color-hover);
+      color: #fff;
+    
+  }
+  .link-int{
+    text-decoration: none;
+    color: var(--link-color-hover);
+  }
+  

@@ -1,0 +1,233 @@
+.main-header{
+    background-color: white;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    /* height: 60px; Ver que tengo que quitarlo luego ***YANET*** */
+    z-index: 2;
+    box-shadow: .2rem .2rem .4rem 0 rgba(0,0,0,.1);
+}
+.header-sticky {
+    width:90%; 
+    height: auto;
+    margin: auto;  
+    display: flex;   
+    align-items: center;
+}
+  
+.logo-home{
+    flex: 1;
+}
+
+.img-logo {
+    width: 180px;
+    height: 50px;
+    object-fit: cover;  
+    margin-top: .25rem;
+}
+
+.label-on-menu,
+.label-off-menu {
+  margin-left: 1rem;  
+  font-size: 23px;
+  cursor: pointer;
+}
+
+.check-menu,
+.label-off-menu,
+.main-menu {
+  display: none;
+}
+
+.check-menu:checked~.main-menu {
+  display: block;
+}
+
+.check-menu:checked~.label-off-menu {
+  display: block;
+}
+
+.check-menu:checked~.label-on-menu {
+  display: none;
+
+}
+
+.check-menu:checked~.main-menu {
+  position: fixed;
+}
+  
+.main-menu {
+  width: 100%;
+  position: absolute;
+  top: 60px;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  flex-grow: 2;
+
+    a{
+        text-decoration: none;
+        border-top: none;
+        border-bottom: 1px solid #ededed;
+     }
+     a:last-child{
+      border-bottom:none;
+     }
+      
+}
+
+  
+.nav-link {
+  display: block;
+  line-height: 20px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--texto);
+  padding: 10px 15px 10px 30px;  
+
+    &:hover {
+      color: var(--link-color-hover);
+    
+    }
+}
+
+.administrar-menu .admin-submenu {
+  display: none;
+  position: absolute;
+  background-color: #fff; 
+  min-width: 200px;
+  z-index: 3;    
+  a{
+    text-decoration: none;
+    border-top: none;
+    border-bottom: 1px solid #ededed;
+    &:hover {
+      color: var(--link-color-hover);
+    
+    }
+ }
+ a:last-child{
+  border-bottom:none;
+ }
+
+}
+
+.administrar-menu:hover .admin-submenu {
+  display: block; 
+}
+
+.user {
+  display: flex;
+  gap: .5rem;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--texto);
+  padding-top: 15px;
+  font-size: 18px;
+}
+
+.user-menu {
+  width: 180px;
+  position: absolute;
+  z-index: 100; 
+  right: -30px;
+  top: 40px;
+  padding-top: 20px; 
+}
+.btn-user{
+  border: none;
+  background: none;
+  cursor: pointer;
+  position: relative;
+  
+ }
+
+
+.user-cart span {  
+  font-size: 12px;
+  background-color: var(--link-color-hover);
+  width: 16px;
+  height: 16px;
+  position: relative;
+  text-align: center;
+  top: -33px;
+  left: 16px;
+  display: block;
+  border-radius: 50%;
+  color: #fff;
+  line-height: 15px;
+}
+.fa-solid {
+  color: darkgray;
+}
+  
+  
+@media screen and (width > 1024px) {
+  
+  .main-menu {
+    position: relative;
+    display: flex !important;
+    height: auto;
+    width: auto;
+    top: 0;
+    bottom: 0;
+    .nav-link{
+      border-top: none;
+      border-bottom: 1px solid #ededed;
+      display: flex;
+      border-bottom: none;
+      a {
+          padding: 20px 12px 3px;
+          color: var(--texto);
+      }
+    }
+  }
+  .logo-home{
+    flex: none;
+  }
+
+  .check-menu,
+  .label-on-menu,
+  .label-off-menu {
+    display: none;
+  }
+
+  .check-menu:checked~nav.main-menu {
+    position: relative;
+    display: flex;
+    height: auto;
+    width: auto;
+    top: 0;
+    bottom: 0;
+
+    ul {
+      display: flex;
+    }
+
+  }
+
+  .check-menu:checked~.label-off-menu {
+    display: none;
+  }
+
+  /* .administrar-menu .admin-submenu {
+    top: 28px;
+    left: 45%;    
+  } */
+
+  .administrar-menu{
+    position: relative;
+  }
+  .user-menu {
+    position: absolute;
+    right: 0;
+    top: 100%; /* Posiciona el menú justo debajo del administrar-menu */
+    width: 180px;
+    background-color: #fff;   
+    z-index: 100;
+  }
+  .admin-submenu{
+    position: absolute;
+    top: 100%;
+  }
+}

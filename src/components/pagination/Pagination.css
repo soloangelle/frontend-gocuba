@@ -1,0 +1,56 @@
+.pag-action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 10px 5px 7px;
+}
+
+.pagination-item {
+    border: 1px solid #ddd;
+    padding: 2px 8px;
+    margin: 0;
+    font-size: 12px;
+    cursor: pointer;
+    background-color: white;
+    transition: background-color 0.3s;
+    
+    /* Bordes personalizados para eliminar el borde entre los botones */
+    border-left: 0;
+}
+
+.pagination-item:first-child {
+    border-left: 1px solid #ddd; /* Restaurar el borde izquierdo para el primer botón */
+}
+
+.pagination-item.active {
+    background-color: #555;
+    color: white;
+    border-color: #555; /* Ajustar el color del borde del botón activo */
+}
+
+.pagination-item:hover:not(.active) {
+    background-color: #f1f1f1;
+}
+
+.select-items-per-page {
+    padding: 4px 8px; /* Igual que .pagination-item */
+    font-size: 12px;
+    cursor: pointer;
+    background-color: #555;
+    border: 1px solid #555; /* Borde completo */
+    transition: background-color 0.3s;
+    color: white;   
+   
+}
+
+.select-items-per-page:focus {
+    outline: none;
+    border-color: #555;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.select-items-per-page option {
+    padding: 2px 8px;
+}
+
